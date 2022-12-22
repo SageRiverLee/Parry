@@ -27,9 +27,6 @@ if(abs(vsp) < move_speed) {
 }
 
 
-
-
-
 if(collision_line(x, y, x + hsp + (sprite_get_width(0)/2) * sign(hsp), y, oWall, 0, 0)){
 	while(!collision_line(x, y, x +  sign(hsp) + (sprite_get_width(0)/2) * sign(hsp), y, oWall, 0, 0)) x += sign(hsp);
 }else{
@@ -63,6 +60,8 @@ if(swing_end){
 	} else{
 		CreateSlash(type.down);
 	}
+	mouse_x = swing[0];
+	mouse_y = swing[1];
 }
 #endregion
 

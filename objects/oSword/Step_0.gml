@@ -6,5 +6,10 @@ y = owner.y + lengthdir_y(20, dir);
 
 image_angle = dir;
 
+if(sprite_index == sSwordSlash && image_index == 10){
+	sprite_index = sSword;
+	image_index = 0;
+}
+
 
 

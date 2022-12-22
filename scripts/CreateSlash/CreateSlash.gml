@@ -9,14 +9,16 @@ enum type{
 }
 
 function CreateSlash(slashType){
-	var swing = instance_create_layer(x, y, "Swings", oSwing);
-	swing.creator = self;
 	switch(slashType){  
 		case type.up:
+		var swing = instance_create_layer(x + lengthdir_x(12, dir), y + lengthdir_y(12, dir), "Swings", oSwing);
 			swing.dmg = 1;
 			swing.spd = 0;
-			swing.duration = 15;
-			
+			swing.duration = 30;
+			swing.creator = self;
+			swing.dir = dir - 90;
+			swing.sprite_index = sSwingForward;
+			swing.image_angle = swing.dir;
 		break;
 		case type.down:
 			show_debug_message("Feint!");
@@ -25,12 +27,22 @@ function CreateSlash(slashType){
 			show_debug_message("Swipe!");
 		break;
 		case type.right:
-			show_debug_message("Slash!");
+			sword.sprite_index = sSwordSlash;
+			sword.image_index = 0;
+			sword.image_speed = 1;
 		break;
 		case type.jab:
-			show_debug_message("Jab!");
+			var swing = instance_create_layer(x + lengthdir_x(24, dir), y + lengthdir_y(24, dir), "Swings", oSwing);
+			swing.dmg = 1;
+			swing.spd = 0;
+			swing.duration = 30;
+			swing.creator = self;
+			swing.dir = dir - 90;
+			swing.sprite_index = sSwingJab;
+			swing.image_angle = swing.dir;
 		break;
 		default:
 			show_debug_message("You hella messed up here");
 	}
+
 }

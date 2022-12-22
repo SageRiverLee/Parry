@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "oSword",
   "spriteId": {
-    "name": "sSword",
-    "path": "sprites/sSword/sSword.yy",
+    "name": "sSwordSlash",
+    "path": "sprites/sSwordSlash/sSwordSlash.yy",
   },
   "solid": false,
   "visible": true,
