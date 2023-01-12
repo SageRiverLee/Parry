@@ -60,8 +60,6 @@ if(swing_end){
 	} else{
 		CreateSlash(type.down);
 	}
-	mouse_x = swing[0];
-	mouse_y = swing[1];
 }
 #endregion
 

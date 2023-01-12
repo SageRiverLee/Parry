@@ -1,7 +1,11 @@
 /// @description Variables and Such
 // You can write your code in this editor
+enum animationState {
+	moving,
+	damage
+}
 
-
+player_animation_state = animationState.moving;
 move_speed = 5;
 dash_speed = 15;
 decel = 1;
